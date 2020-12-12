@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import PropTypes from 'prop-types';
 import {
@@ -35,6 +35,13 @@ const useStyles = makeStyles((theme) => ({
 const TotalCustomers = ({ className, ...rest }) => {
   const classes = useStyles();
 
+  // const [numberOfLeads , setNumberOfLeads] = useState('');
+  
+  // useEffect(()=> {
+  //   reciveDateFromApi();
+
+  // },[numberOfLeads])
+
   return (
     <Card
       className={clsx(classes.root, className)}
@@ -58,7 +65,7 @@ const TotalCustomers = ({ className, ...rest }) => {
               color="textPrimary"
               variant="h3"
             >
-              1,600
+              15444
             </Typography>
           </Grid>
           <Grid item>

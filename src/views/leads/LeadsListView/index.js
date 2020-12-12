@@ -8,6 +8,8 @@ import Page from 'src/components/Page';
 import Results from './Results';
 import Toolbar from './Toolbar';
 import data from './data';
+import LeadsInfo from './LeadInfo';
+import LeadComments from './leadComments';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -25,10 +27,12 @@ const CustomerListView = () => {
   return (
     <Page
       className={classes.root}
-      title="Customers"
+      title="Leads"
     >
       <Container maxWidth={false}>
         <Toolbar />
+        <LeadsInfo />
+        <LeadComments />
         <Box mt={3}>
           <Results customers={customers} />
         </Box>
