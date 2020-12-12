@@ -110,6 +110,9 @@ const Results = ({ className, customers, ...rest }) => {
                 </TableCell>
               </TableRow>
             </TableHead>
+            
+            {/* Rendering the Leads to the table */}
+
             <TableBody>
               {customers.slice(0, limit).map((customer) => (
                 <TableRow
