@@ -23,13 +23,13 @@ const data = [
   {
     id: uuid(),
     name: 'Dropbox',
-    imageUrl: '/static/images/products/product_1.png',
+    imageUrl: '/static/images/products/Etoro.jpg',
     updatedAt: moment().subtract(2, 'hours')
   },
   {
     id: uuid(),
     name: 'Medium Corporation',
-    imageUrl: '/static/images/products/product_2.png',
+    imageUrl: '/static/images/products/Excentral.png',
     updatedAt: moment().subtract(2, 'hours')
   },
   {
@@ -73,7 +73,7 @@ const LatestProducts = ({ className, ...rest }) => {
     >
       <CardHeader
         subtitle={`${products.length} in total`}
-        title="Latest Products"
+        title="Brands Connected to Platfrom"
       />
       <Divider />
       <List>

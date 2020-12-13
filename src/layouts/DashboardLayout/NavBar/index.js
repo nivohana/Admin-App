@@ -20,7 +20,8 @@ import {
   ShoppingBag as ShoppingBagIcon,
   User as UserIcon,
   UserPlus as UserPlusIcon,
-  Users as UsersIcon
+  Users as UsersIcon,
+  Activity
 } from 'react-feather';
 import NavItem from './NavItem';
 
@@ -35,6 +36,11 @@ const items = [
     href: '/app/dashboard',
     icon: BarChartIcon,
     title: 'Dashboard'
+  },
+  {
+    href: '/app/campaigns',
+    icon: Activity,
+    title: 'Campaigns'
   },
   {
     href: '/app/leads',
@@ -164,7 +170,8 @@ const NavBar = ({ onMobileClose, openMobile }) => {
         >
           Upgrade to PRO version and access 20 more screens
         </Typography>
-        <Box
+        
+        {/* <Box
           display="flex"
           justifyContent="center"
           mt={2}
@@ -177,7 +184,7 @@ const NavBar = ({ onMobileClose, openMobile }) => {
           >
             See PRO version
           </Button>
-        </Box>
+        </Box> */}
       </Box>
     </Box>
   );

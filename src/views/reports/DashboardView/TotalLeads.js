@@ -32,15 +32,12 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const TotalCustomers = ({ className, ...rest }) => {
+const TotalLeads = ({ className, ...rest }) => {
   const classes = useStyles();
 
-  // const [numberOfLeads , setNumberOfLeads] = useState('');
+ 
   
-  // useEffect(()=> {
-  //   reciveDateFromApi();
-
-  // },[numberOfLeads])
+ 
 
   return (
     <Card
@@ -59,13 +56,13 @@ const TotalCustomers = ({ className, ...rest }) => {
               gutterBottom
               variant="h6"
             >
-              TOTAL CUSTOMERS
+              TOTAL LEADS
             </Typography>
             <Typography
               color="textPrimary"
               variant="h3"
             >
-              15444
+              100
             </Typography>
           </Grid>
           <Grid item>
@@ -98,8 +95,8 @@ const TotalCustomers = ({ className, ...rest }) => {
   );
 };
 
-TotalCustomers.propTypes = {
+TotalLeads.propTypes = {
   className: PropTypes.string
 };
 
-export default TotalCustomers;
+export default TotalLeads;

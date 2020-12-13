@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   Container,
   Grid,
@@ -9,10 +9,11 @@ import Budget from './Budget';
 import LatestOrders from './LatestOrders';
 import LatestProducts from './LatestProducts';
 import Sales from './Sales';
-import TasksProgress from './TasksProgress';
-import TotalCustomers from './TotalCustomers';
+import TotalConversions from './TotalConversions';
+import TotalLeads from './TotalLeads';
 import TotalProfit from './TotalProfit';
 import TrafficByDevice from './TrafficByDevice';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -26,6 +27,15 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const classes = useStyles();
 
+  const [numberOfLeads , setNumberOfLeads] = useState('');
+
+  // useEffect(()=> {
+  //   axios.get('')
+
+
+  // },[numberOfLeads])
+
+
   return (
     <Page
       className={classes.root}
@@ -34,9 +44,9 @@ const Dashboard = () => {
       <Container maxWidth={false}>
         <Grid
           container
-          spacing={3}
+          spacing={4}
         >
-          <Grid
+          {/* <Grid
             item
             lg={3}
             sm={6}
@@ -44,6 +54,17 @@ const Dashboard = () => {
             xs={12}
           >
             <Budget />
+            
+          </Grid> */}
+
+          <Grid
+            item
+            lg={3}
+            sm={6}
+            xl={3}
+            xs={12}
+          >
+            <TotalLeads />
           </Grid>
           <Grid
             item
@@ -52,16 +73,7 @@ const Dashboard = () => {
             xl={3}
             xs={12}
           >
-            <TotalCustomers />
-          </Grid>
-          <Grid
-            item
-            lg={3}
-            sm={6}
-            xl={3}
-            xs={12}
-          >
-            <TasksProgress />
+            <TotalConversions />
           </Grid>
           <Grid
             item
